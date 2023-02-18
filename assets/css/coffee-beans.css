@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Raleway:wght@400;500;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  outline: none;
+  border:none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Oswald',sans-serif;
+}
+
+p{
+  font-family: 'Raleway',sans-serif;
+}
+
+.wrapper{
+  width: 100%;
+  margin:auto;
+}
+
+
+/* Nav area */
+.nav{
+  /* The auto value is similar to scroll , but it adds scroll bars only when necessary: You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box */
+  overflow: auto;
+  width:85%;
+  margin: 1em auto;
+}
+
+.nav h1{
+  text-transform: uppercase;
+  width:50%;
+  float: left;
+}
+
+.nav h1 a{
+  font-family:'Oswald',sans-serif;
+  color:#96746b;
+  text-decoration: none;
+}
+
+.nav ul{
+  width:50%;
+  float:left;
+  text-align: right;
+  padding-top:1em;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin:1em;
+}
+
+.nav ul a{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  color: #312a26;
+  text-decoration: none;
+}
+
+/* Banner area */
+.banner{
+  background-image: url('../images/banner-bg.jpg');
+  background-position: center;
+  position: relative;
+  width:100%;
+  height:670px;
+}
+
+.banner-text{
+  position: absolute;
+  top:50%;
+  left:7.5%;
+  transform: translateY(-50%);
+  width:45%;
+}
+
+.banner-text h2{
+  color: #c7a17a;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.banner-text h2 span{
+  color: #96746b;
+}
+
+.banner-text p{
+  color: #fff;
+}
+
+.banner-text a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  background-color: #312a26;
+  color: #fff;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+/* [3] Ads Section */
+.ads{
+  width:85%;
+  margin:4em auto;
+  overflow: auto;
+}
+
+.ads-items{
+  width:48.5%;
+  float: left;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  margin-bottom:3%;
+}
+
+.ads-item1{
+  background-image:url(../images/ads-img1.jpg);
+  margin-right:3%;
+}
+
+.ads-item2{
+  background-image:url(../images/ads-img2.jpg);
+}
+
+.ads-text{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:40%;
+  transform:translateY(-50%);
+}
+
+.ads-text h3{
+  text-transform:uppercase;
+  font-size: 2em;
+  color: #fff;
+  line-height: 1.2em;
+  text-shadow: 3px 3px 6px #312a26;
+}
+
+
+.ads-text a{
+  display: block;
+  font-family:'Raleway', sans-serif;
+  font-family: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top:1em;
+  text-shadow: 3px 3px 6px #312a26;
+}
+
+/*[4] Merchandise Section*/
+.merch{
+  width:85%;
+  margin:4em auto;
+  overflow: auto;
+}
+
+.section-header{
+  text-align: center;
+}
+
+.section-header span{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 500;
+  font-style:italic;
+  color: #c7a17a;
+}
+
+.section-header h2{
+  text-transform: uppercase;
+  color:  #312a26;
+}
+
+.section-header hr{
+  background-color: #c7a17a;
+  height:2px;
+  width:25%;
+  margin:auto auto 30px auto;
+}
+
+.merch-gallary{
+  margin:2em auto;
+}
+
+.merch-items{
+  width:24.25%;
+  float: left;
+  margin-right:1%;
+  margin-bottom:1%;
+}
+
+.merch-items img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  /*object-fit ~~ it will the image inside the container's width properly and not strech it, which is equivalent to background-size: cover for the image*/
+  /*height and object-fit are fail safe?? in the case that image is not fit*/
+}
+
+/*just for fail safe, we should set the maring-right:0 for the edge element for each line*/
+.merch-items:nth-child(4),
+.merch-items:nth-child(8){
+  margin-right:0;
+}
+
+
+/*[5] Discount 2*/
+.discount{
+  background-image: url(../images/discount-img.jpg);
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  width:85%;
+  margin:4em auto;
+  height:400px;
+  margin-top:2em;
+  overflow: auto;
+}
+
+.discount-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  /*
+  tranform ~~ transforms/change the element
+  translate ~~ change the position of the element
+  translte(X-axis, Y-axis)
+  */
+  width:50%;
+  text-align: center;
+}
+
+.discount-text span{
+  color: #fff;
+  font-style: italic;
+  font-family: 'Raleway',sans-serif;
+  text-shadow:3px 3px 6px #312a26;
+}
+
+.discount-text h2{
+  color: #fff;
+  font-size:2em;
+  text-transform: uppercase;
+  text-shadow:3px 3px 6px #312a26;
+}
+
+.discount-text a{
+  text-decoration: none;
+  /*why inline-block for this a tag? because*/
+  display: inline-block;
+  padding: 1em;
+  background-color: rgb(193, 191, 191,0.5);
+  color: #312a26;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+/* [7] Ads Section */
+
+.ads-items:nth-child(odd){
+  margin-right:3%;
+}
+.ads-item3{
+  background-image: url(../images/ads-img3.jpg);
+}
+
+.ads-item4{
+  background-image: url(../images/ads-img4.jpg);
+}
+
+.ads-item5{
+  background-image: url(../images/ads-img5.jpg);
+}
+
+.ads-item6{
+  background-image: url(../images/ads-img6.jpg);
+}
+
+/* [8] Form Section */
+.form{
+  width:85%;
+  margin:4em auto;
+  overflow: auto;
+}
+
+.forms-items{
+  border:2px solid rgb(213, 212, 212,0);
+  background-color: rgb(247, 247, 247);
+  width:49%;
+  padding:2em 1%;
+  float: left;
+  height:700px;
+}
+
+.form1{
+  margin-right: 1%;
+}
+
+.form2{
+  margin-right: 0;
+  margin-left:1%;
+}
+
+::placeholder{
+  padding-left:10px;
+}
+
+.form-title{
+  font-family: 'Raleway',sans-serif;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+label h4{
+  font-family: 'Raleway',sans-serif;
+  padding: 10px;
+}
+
+.forms-items input,select{
+  width: 100%;
+  height:40px;
+}
+
+.reservation-time {
+  text-align: center;
+}
+.reservation-time label{
+  font-weight: bold;
+  font-family: 'Raleway',sans-serif;
+}
+.reservation-time input{
+  width:10px;
+  height:10px;
+  padding-top:2px;
+}
+.forms-items textarea{
+  width: 100%;
+  height: 200px;
+}
+
+.forms-items h3{
+  padding-top:1em;
+  text-align: center;
+}
+
+.form2 img{
+  width:120px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+}
+.card-info{
+  padding-top: 2em;
+  font-family: 'Raleway',sans-serif;
+  text-align: center;
+}
+
+.res-agreement {
+  font-weight: bold;
+  font-family: 'Raleway',sans-serif;
+  padding-top:1em;
+  padding-bottom: 2px;
+}
+
+.send-form{
+  text-align: center;
+  background-color: #C7A17A;
+  width:100%;
+  height:40px;
+  font-weight: bold;
+  padding:auto;
+}
+
+
+/* [9] Footer Section */
+.footer-a{
+  background-image: url(../images/footer-img.jpg);
+  background-position: center;
+  overflow: auto;
+  color: #fff;
+  /* box-sizing: content-box; */
+}
+.content-range{
+  width:85%;
+  margin:3em auto;
+}
+.each-section{
+  float: left;
+  width:25%;
+  padding-bottom: 3em;
+}
+
+.footer-header{
+  margin:2em auto;
+}
+.footer-header h3{
+  text-transform: uppercase;
+}
+
+.footer-content th,.footer-content td{
+  font-family: 'Raleway',sans-serif;
+}
+
+.footer-content span{
+  color: #C7A17A;
+}
+
+.footer-content p{
+  color: #C7A17A;
+}
+
+.search{
+  margin:2em auto 10px auto;
+}
+
+.footer-content input{
+  width:160px;
+  height:30px;
+}
+
+.footer-content button{
+  height:30px;
+  width:60px;
+  background-color: #C7A17A;
+  font-weight: bold;
+  font-size:13px;
+  padding:2px;
+  text-transform: uppercase;
+}
+
+.footer-content h4{
+  color: #fff;
+}
+
+/* [10] Footer Socials */
+.footer-socials{
+  background-color: #19100F;
+  padding:1em 7.5%;
+  overflow: auto;
+  color: #fff;
+  clear: both;
+}
+
+.social-widget{
+  width: 32.66%;
+  float: left;
+  text-align: center;
+}
+
+.social-widget h3{
+  text-transform: uppercase;
+}
+
+.social-widget img{
+  width:1.5em;
+}
+
+
